@@ -7,11 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B3979B811B376EE00C9709B /* simple.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C870E3F2115C3D5E00E0268B /* simple.cpp */; };
+		7B3979BA11B376EE00C9709B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B6ACAB711B0C312003FD558 /* Cocoa.framework */; };
+		7B3979C311B3776800C9709B /* oauthexample.c in Sources */ = {isa = PBXBuildFile; fileRef = 7B3979C211B3776800C9709B /* oauthexample.c */; };
+		7B3979E211B37E4600C9709B /* liboauth.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B3979E111B37E4600C9709B /* liboauth.a */; };
 		7B6ACAB811B0C312003FD558 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B6ACAB711B0C312003FD558 /* Cocoa.framework */; };
 		C870E3F3115C3D5E00E0268B /* simple.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C870E3F2115C3D5E00E0268B /* simple.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B39798A11B32F9B00C9709B /* oauth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = oauth.h; path = "liboauth-0.8.5/include/oauth.h"; sourceTree = "<group>"; };
+		7B3979BF11B376EE00C9709B /* oauth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = oauth.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B3979C111B376EE00C9709B /* oauth.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = oauth.plist; sourceTree = "<group>"; };
+		7B3979C211B3776800C9709B /* oauthexample.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = oauthexample.c; sourceTree = "<group>"; };
+		7B3979E111B37E4600C9709B /* liboauth.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = liboauth.a; sourceTree = "<group>"; };
 		7B6ACAB711B0C312003FD558 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		7B6ACC1411B0C3FF003FD558 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C870E3F2115C3D5E00E0268B /* simple.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = simple.cpp; path = ../src/simple.cpp; sourceTree = SOURCE_ROOT; };
@@ -19,6 +28,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7B3979B911B376EE00C9709B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B3979BA11B376EE00C9709B /* Cocoa.framework in Frameworks */,
+				7B3979E211B37E4600C9709B /* liboauth.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D11072E0486CEB800E47090 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -41,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				C870E405115C3DBD00E0268B /* simple.app */,
+				7B3979BF11B376EE00C9709B /* oauth.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,6 +67,7 @@
 		29B97314FDCFA39411CA2CEA /* simple */ = {
 			isa = PBXGroup;
 			children = (
+				7B3979C211B3776800C9709B /* oauthexample.c */,
 				C870E3F2115C3D5E00E0268B /* simple.cpp */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -69,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				7B6ACC1411B0C3FF003FD558 /* Info.plist */,
+				7B3979C111B376EE00C9709B /* oauth.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -76,7 +97,9 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7B39798A11B32F9B00C9709B /* oauth.h */,
 				7B6ACAB711B0C312003FD558 /* Cocoa.framework */,
+				7B3979E111B37E4600C9709B /* liboauth.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -84,6 +107,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		7B3979B511B376EE00C9709B /* oauth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B3979BC11B376EE00C9709B /* Build configuration list for PBXNativeTarget "oauth" */;
+			buildPhases = (
+				7B3979B611B376EE00C9709B /* Resources */,
+				7B3979B711B376EE00C9709B /* Sources */,
+				7B3979B911B376EE00C9709B /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = oauth;
+			productInstallPath = "$(HOME)/Applications";
+			productName = simple;
+			productReference = 7B3979BF11B376EE00C9709B /* oauth.app */;
+			productType = "com.apple.product-type.application";
+		};
 		8D1107260486CEB800E47090 /* simple */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "simple" */;
@@ -115,11 +156,19 @@
 			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* simple */,
+				7B3979B511B376EE00C9709B /* oauth */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7B3979B611B376EE00C9709B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D1107290486CEB800E47090 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -130,6 +179,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7B3979B711B376EE00C9709B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B3979B811B376EE00C9709B /* simple.cpp in Sources */,
+				7B3979C311B3776800C9709B /* oauthexample.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D11072C0486CEB800E47090 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -141,6 +199,48 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		7B3979BD11B376EE00C9709B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = oauth.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				PRODUCT_NAME = oauth;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		7B3979BE11B376EE00C9709B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = oauth.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				PRODUCT_NAME = oauth;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 		C01FCF4B08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -154,6 +254,10 @@
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/liboauth-0.8.5/lib\"",
+				);
 				PRODUCT_NAME = simple;
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = YES;
@@ -170,6 +274,10 @@
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/liboauth-0.8.5/lib\"",
+				);
 				PRODUCT_NAME = simple;
 				WRAPPER_EXTENSION = app;
 			};
@@ -178,6 +286,8 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
@@ -193,17 +303,15 @@
 				PREBINDING = NO;
 				PRELINK_LIBS = "";
 				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
-				VALID_ARCHS = "i386 x86_64";
+				VALID_ARCHS = i386;
 			};
 			name = Debug;
 		};
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
@@ -219,12 +327,22 @@
 				PREBINDING = NO;
 				PRELINK_LIBS = "";
 				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+				VALID_ARCHS = i386;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7B3979BC11B376EE00C9709B /* Build configuration list for PBXNativeTarget "oauth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B3979BD11B376EE00C9709B /* Debug */,
+				7B3979BE11B376EE00C9709B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "simple" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
